@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "lint": "prettier --write",
+    "start": "nodemon --exec ts-node server.ts",
+    "start:prod": "pm2 delete squarecode; pm2 start --name squarecode --watch squarecode \"npx ts-node --transpile-only server.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "pm2": "^5.3.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.6",
+    "typescript": "^5.3.2"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1"
+  }
+}
